@@ -1,0 +1,140 @@
+<?php
+if(isset($_POST["POST"])){
+  require "phpmailer/PHPMailerAutoload.php";
+  $mail  = new PHPMailer;
+  $mail->isSMTP();
+  $mail->Host="smtp.gmail.com";
+  $mail->Port=587;
+  $mail->SMTPAuth=true;
+  $mail->SMTPSecure="tls";
+  $mail->Username="lisandrogomez732@gmail.com";
+  $mail->Password ="Vijeeter123";
+  $mail->setFrom($_POST["email"],$_POST["nombre"]);
+  $mail->addAddres("lisandrogomez732@gmail.com");
+  $mail->addReplyTo($_POST["email"],$_POST["nombre"]);
+
+  $mail->isHTML(true);
+  $mail->Subject="Enviado por ".$_POST["nombre"];
+  $mail->Body = "<h1> align=center>Nombre: ".$_POST["nombre"]."<br>Email: " $_POST["email"]."<br>Mensaje: ".$_POST["mensaje"]. "<h1>" ;
+    if(!email->send()){
+      $result = "algo salio mal"
+    }
+    else{
+ $result = "Gracias sos un pija larga asdasd"
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  </head>
+  <body>
+
+
+  <main class = "hero" >
+    <div class="hero-text">
+      <h1> Lisandro Gómez <br><span class="typed"></span></h1>
+      <a href="#section2">
+      <i class="fas fa-arrow-down arrow" ></i>
+      </a>
+  </div>
+
+    <div id = "particles-js">
+    </div>
+  </main>
+
+
+<section class="body " id = "section2">
+  <h2 class = "centrar-texto h2-section2">Mis proyectos</h2>
+  <div class="swiper-container mySwiper">
+       <div class="swiper-wrapper">
+         <div class="swiper-slide">
+           <a href="https://es.shopify.com/blog/21-portafolios-de-diseno-web-memorables-para-inspirar-tu-propio-sitio-web">
+<img src="./img/index-1.png" alt="">
+</a>
+         </div>
+         <div class="swiper-slide">
+           <a href="https://es.shopify.com/blog/21-portafolios-de-diseno-web-memorables-para-inspirar-tu-propio-sitio-web">
+<img src="./img/index-2.png" alt="">
+</a>
+         </div>
+         <div class="swiper-slide">
+           <a href="https://es.shopify.com/blog/21-portafolios-de-diseno-web-memorables-para-inspirar-tu-propio-sitio-web">
+<img src="./img/index-3.png" alt="">
+</a>
+         </div>
+         <div class="swiper-slide">
+           <a href="https://es.shopify.com/blog/21-portafolios-de-diseno-web-memorables-para-inspirar-tu-propio-sitio-web">
+<img src="./img/index-4.png" alt="">
+</a>
+         </div>
+         <div class="swiper-slide">
+           <a href="https://es.shopify.com/blog/21-portafolios-de-diseno-web-memorables-para-inspirar-tu-propio-sitio-web">
+<img src="./img/index-1.png" alt="">
+</a>
+         </div>
+         <div class="swiper-slide">
+           <a href="https://es.shopify.com/blog/21-portafolios-de-diseno-web-memorables-para-inspirar-tu-propio-sitio-web">
+<img src="./img/index-2.png" alt="">
+</a>
+       </div>
+       </div>
+       <div class="swiper-button-next"></div>
+       <div class="swiper-button-prev"></div>
+       <div class="swiper-pagination"></div>
+     </div>
+     <a href="#section3">
+     <i class="fas fa-arrow-down arrow arrowsec2 centrar-texto"></i>
+     </a>
+</section>
+
+<section class ="about" id = "section3">
+  <div class="about-wrapper">
+    <div class="about-me">
+    <h2>About me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+<div class="about-img">
+<img src="./img/about-img.svg" alt="">
+</div>
+  </div>
+  <a href="#section3">
+  <i class="fas fa-arrow-down arrow arrowsec2 centrar-texto"></i>
+  </a>
+</section>
+
+<section>
+  <form  method="post">
+
+<input type="text" name="nombre" value="nombre"required>
+<input type="email" name="email" value="email"required>
+<!-- <input type="text" name="Asunto" value="asunto"required> -->
+<textarea name="mensaje" rows="8" cols="80"></textarea>
+<input type="submit" name="submit" value="enviar">
+<h2 > <?= $result; ?></h2>
+</form>
+
+</section>
+<!-- ^4fzhpC$M*OYOLMSkXWi -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="./js/main.js"></script>
+  <script src = "./js/particles.js"></script>
+<script src = "./js/particulas.js"></script></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src = "./js/script.js">
+
+</script>
+<script src="https://kit.fontawesome.com/b4330cc7e4.js" crossorigin="anonymous"></script>
+
+</script>
+
+  </body>
+</html>

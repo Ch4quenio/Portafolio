@@ -1,0 +1,176 @@
+html{
+  font-size: 62.5%;
+scroll-behavior: smooth;
+}
+
+
+body{
+  font-size: 1.6rem;
+    margin: 0;
+    color:#E5E5E5;
+background: #252424;
+font-family: 'Oswald', sans-serif;
+margin: 0;
+padding: 0;
+}
+
+
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto 0 auto;
+}
+
+.contenedor-mas-pequeño{
+  max-width: 75rem;
+  margin: 0 auto 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+img{
+  max-width: 100%;
+}
+
+.centrar-texto{
+  text-align: center;
+}
+
+.fw700{
+  font-weight: 700;
+}
+.fw900{
+  font-weight: 900;
+}
+.margin0{
+  margin: 0;
+}
+
+/* HERO */
+.hero-text {
+font-family: 'Oswald', sans-serif;
+text-transform: uppercase;
+position: absolute;
+left: 29.5%;
+top:10%;
+}
+.arrow{
+  position: absolute;
+  left: 45%;
+  color: #e5e5e5;
+  /* font-size: 6rem */
+}
+.arrowsec2{
+  left:50%;
+  margin: 2rem;
+}
+
+@media screen and (min-width:1246px){
+  .hero-text{
+    font-size: 6rem;
+    background: #252424
+  }
+.arrow{
+  font-size: 6rem
+}
+  .h2-section2{
+      font-size: 5rem;
+  }
+
+}
+
+/* SLIDER */
+
+
+
+   .body {
+     position: relative;
+     height: 100%;
+
+   }
+
+
+
+   .swiper-container {
+     width: 100%;
+     height: 100%;
+   }
+
+   .swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     background: #fff;
+     /* Center slide text vertically */
+     /* display: -webkit-box;
+     display: -ms-flexbox;
+     display: -webkit-flex; */
+     display: flex;
+     /* -webkit-box-pack: center;
+     -ms-flex-pack: center; */
+     /* -webkit-justify-content: center; */
+     justify-content: center;
+     /* -webkit-box-align: center; */
+     /* -ms-flex-align: center;
+     -webkit-align-items: center; */
+     align-items: center;
+   }
+   .swiper-slide img {
+     display: block;
+     max-width: 100%;
+ width: 80rem;
+ height: 50rem;
+     object-fit: cover;
+   }
+   @media screen and (max-width:1250px){
+     .swiper-slide{
+       display: block;
+     }
+     .swiper-slide img{
+       width: 100%;
+       height: 100%;
+     }
+   }
+
+
+
+
+   /* ABOUT */
+   .about{
+     margin-top:20rem;
+   }
+   @media screen and (min-width:1250px){
+     .about{
+       margin-top: 45rem;
+     }
+     .about-wrapper{
+       position: relative;
+       bottom: 15rem;
+     }
+   }
+
+.about-wrapper{
+  display: flex;
+  justify-content:  center;
+  position: relative;
+  bottom: 15rem;
+}
+.about-me{
+  margin-left: 4rem;
+}
+@media screen and (max-width:1250px){
+.about-wrapper{
+  display: block;
+}
+}
+
+.about-img img{
+  width: 70rem
+}
+/* @media screen and (min-width:1250px){
+  .about-img img{
+    position:relative;
+    left: 20rem;
+  }
+} */
